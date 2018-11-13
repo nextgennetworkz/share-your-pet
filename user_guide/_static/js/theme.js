@@ -23,8 +23,7 @@ $(document).ready(function () {
         $('#nav').slideToggle();
     });
     $('#closeMe').toggle(
-        function ()
-        {
+        function () {
             setCookie('ciNav', 'yes', 365);
             $('#nav2').show();
             $('#topMenu').remove();
@@ -33,8 +32,7 @@ $(document).ready(function () {
             $('.wy-breadcrumbs').append('<div style="float:right;"><div style="float:left;" id="topMenu">' + $('.wy-form').parent().html() + '</div></div>');
             $('.wy-nav-side').toggle();
         },
-        function ()
-        {
+        function () {
             setCookie('ciNav', 'no', 365);
             $('#topMenu').remove();
             $('#nav').hide();
@@ -44,8 +42,7 @@ $(document).ready(function () {
             $('.wy-nav-side').show();
         }
     );
-    if (getCookie('ciNav') == 'yes')
-    {
+    if (getCookie('ciNav') == 'yes') {
         $('#closeMe').trigger('click');
         //$('#nav').slideToggle();
     }
@@ -56,7 +53,7 @@ $(document).ready(function () {
 // Rufnex Cookie functions
 function setCookie(cname, cvalue, exdays) {
     // expire the old cookie if existed to avoid multiple cookies with the same name
-    if  (getCookie(cname)) {
+    if (getCookie(cname)) {
         document.cookie = cname + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
     var d = new Date();
@@ -64,6 +61,7 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
 }
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -77,10 +75,11 @@ function getCookie(cname) {
     }
     return '';
 }
+
 // End
 
 // resize window
-$(window).on('resize', function(){
+$(window).on('resize', function () {
     // show side nav on small screens when pulldown is enabled
     if (getCookie('ciNav') == 'yes' && $(window).width() <= 768) { // 768px is the tablet size defined by the theme
         $('.wy-nav-side').show();
@@ -103,23 +102,23 @@ $(window).on('resize', function(){
 window.SphinxRtdTheme = (function (jquery) {
     var stickyNav = (function () {
         var navBar,
-                win,
-                stickyNavCssClass = 'stickynav',
-                applyStickNav = function () {
-                    if (navBar.height() <= win.height()) {
-                        navBar.addClass(stickyNavCssClass);
-                    } else {
-                        navBar.removeClass(stickyNavCssClass);
-                    }
-                },
-                enable = function () {
-                    applyStickNav();
-                    win.on('resize', applyStickNav);
-                },
-                init = function () {
-                    navBar = jquery('nav.wy-nav-side:first');
-                    win = jquery(window);
-                };
+            win,
+            stickyNavCssClass = 'stickynav',
+            applyStickNav = function () {
+                if (navBar.height() <= win.height()) {
+                    navBar.addClass(stickyNavCssClass);
+                } else {
+                    navBar.removeClass(stickyNavCssClass);
+                }
+            },
+            enable = function () {
+                applyStickNav();
+                win.on('resize', applyStickNav);
+            },
+            init = function () {
+                navBar = jquery('nav.wy-nav-side:first');
+                win = jquery(window);
+            };
         jquery(init);
         return {
             enable: enable
