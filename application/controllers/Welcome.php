@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require '/var/www/html/share-your-pet/application/libraries/vendor/autoload.php';
+
+use PHPAuth\Auth as PHPAuth;
+use PHPAuth\Config as PHPAuthConfig;
+
 class Welcome extends CI_Controller
 {
 
@@ -21,6 +26,14 @@ class Welcome extends CI_Controller
      */
     public function index()
     {
-        $this->load->view('welcome_message');
+        $params = array("firstName" => "Nishen", "lastName" => "Peiris", "biography" => "I'm a software engineer.");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
+
+        $config = new PHPAuthConfig($dbh);
+        $auth = new PHPAuth($dbh, $config);
+
+        $result = $auth->register("nishenkpeiris@gmail.com", "25d55ad283aa400af464c76d713c07ad", "25d55ad283aa400af464c76d713c07ad", $params, null, true);
+
+        print_r($result);
     }
 }
