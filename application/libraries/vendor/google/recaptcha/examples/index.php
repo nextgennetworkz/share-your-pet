@@ -31,6 +31,10 @@ require __DIR__ . '/appengine-https.php';
 <link rel="canonical" href="https://recaptcha-demo.appspot.com/">
 <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "WebSite", "name": "reCAPTCHA demo", "url": "http://recaptcha-demo.appspot.com/" }
+
+
+
+
 </script>
 <meta name="description" content="reCAPTCHA demo"/>
 <meta property="og:url" content="https://recaptcha-demo.appspot.com/"/>

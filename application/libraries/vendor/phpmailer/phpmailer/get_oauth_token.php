@@ -37,6 +37,7 @@ namespace PHPMailer\PHPMailer;
  * Plenty to choose from here:
  * @see http://oauth2-client.thephpleague.com/providers/thirdparty/
  */
+
 // @see https://github.com/thephpleague/oauth2-google
 use Hayageek\OAuth2\Client\Provider\Yahoo;
 use League\OAuth2\Client\Provider\Google;

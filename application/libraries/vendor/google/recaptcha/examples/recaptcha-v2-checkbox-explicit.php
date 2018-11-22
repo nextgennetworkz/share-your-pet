@@ -50,6 +50,10 @@ $lang = 'en';
 <link rel="canonical" href="https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox-explicit.php">
 <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "WebSite", "name": "reCAPTCHA demo - \"I'm not a robot\" checkbox - Explicit render", "url": "https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox-explicit.php" }
+
+
+
+
 </script>
 <meta name="description" content="reCAPTCHA demo - &quot;I'm not a robot&quot; checkbox - Explicit render"/>
 <meta property="og:url" content="https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox-explicit.php"/>

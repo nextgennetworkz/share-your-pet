@@ -669,8 +669,8 @@ var Search = {
 
             // no match but word was a required one
             if ($u.every(_o, function (o) {
-                    return o.files === undefined;
-                })) {
+                return o.files === undefined;
+            })) {
                 break;
             }
             // found search word in contents

@@ -50,6 +50,10 @@ $lang = 'en';
 <link rel="canonical" href="https://recaptcha-demo.appspot.com/recaptcha-v2-invisible.php">
 <script type="application/ld+json">
     { "@context": "http://schema.org", "@type": "WebSite", "name": "reCAPTCHA demo - Invisible", "url": "https://recaptcha-demo.appspot.com/recaptcha-v2-invisible.php" }
+
+
+
+
 </script>
 <meta name="description" content="reCAPTCHA demo - Invisible"/>
 <meta property="og:url" content="https://recaptcha-demo.appspot.com/recaptcha-v2-invisible.php"/>
