@@ -78,7 +78,7 @@
 </head>
 <body>
 
-<form action="register" method="post">
+<form action="../User_controller/register" method="post">
     <div class="container">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>

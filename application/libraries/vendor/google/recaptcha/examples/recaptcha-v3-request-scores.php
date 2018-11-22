@@ -56,6 +56,7 @@ $lang = 'en';
 
 
 
+
 </script>
 <meta name="description" content="reCAPTCHA demo - Request scores"/>
 <meta property="og:url" content="https://recaptcha-demo.appspot.com/recaptcha-v2-request-scores.php"/>

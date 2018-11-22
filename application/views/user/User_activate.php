@@ -78,7 +78,7 @@
 </head>
 <body>
 
-<form action="activate" method="post">
+<form action="../User_controller/activate" method="post">
     <div class="container">
         <h1>Activate</h1>
         <p>Please fill in this form to activate your account.</p>
@@ -91,7 +91,7 @@
     </div>
 
     <div class="container signup">
-        <p>Resend activation code? <a href="resendActivationView">Resend activation code</a>.</p>
+        <p>Resend activation code? <a href="resend-activation-code">Resend activation code</a>.</p>
     </div>
 </form>
 

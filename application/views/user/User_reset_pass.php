@@ -72,20 +72,20 @@
 </head>
 <body>
 
-<form action="resetPass" method="post">
+<form action="../User_controller/resetPassword" method="post">
     <div class="container">
         <h1>Password reset</h1>
         <p>Please fill in this form to reset your password.</p>
         <hr>
 
-        <label for="email"><b>Email address*</b></label>
-        <input type="email" placeholder="Enter e-mail" name="email" required>
+        <label for="key"><b>Password reset key*</b></label>
+        <input type="text" placeholder="Enter reset key" name="key" required>
 
-        <label for="email"><b>Password*</b></label>
-        <input type="email" placeholder="Enter e-mail" name="email" required>
+        <label for="password"><b>Password*</b></label>
+        <input type="password" placeholder="Enter password" name="password" required>
 
-        <label for="email"><b>Repeat password*</b></label>
-        <input type="email" placeholder="Enter e-mail" name="email" required>
+        <label for="repeat_password"><b>Repeat password*</b></label>
+        <input type="password" placeholder="Repeat password" name="repeat_password" required>
 
         <button type="submit" class="resetbtn">Reset</button>
     </div>
