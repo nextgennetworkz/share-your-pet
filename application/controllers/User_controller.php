@@ -79,11 +79,11 @@ class User_controller extends CI_Controller
         $first_name = $this->input->post('first_name');
         $last_name = $this->input->post('last_name');
         $email = $this->input->post('email');
-        $password = $this->input->post('password');
-        $repeat_password = $this->input->post('repeat_password');
+        $encrypted_password = md5($this->input->post('password'));
+        $encrypted_repeat_password = md5($this->input->post('repeat_password'));
         $biography = $this->input->post('biography');
 
-        $this->User_Model->register($first_name, $last_name, $email, $password, $repeat_password, $biography);
+        $this->User_Model->register($first_name, $last_name, $email, $encrypted_password, $encrypted_repeat_password, $biography);
     }
 
     /**
@@ -126,10 +126,10 @@ class User_controller extends CI_Controller
         $this->load->model('User_Model');
 
         $email = $this->input->post('email');
-        $password = $this->input->post('password');
+        $encrypted_password = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
         $remember_me = $this->input->post('remember_me');
 
-        $this->User_Model->login($email, $password, $remember_me);
+        $this->User_Model->login($email, $encrypted_password, $remember_me);
     }
 
     /**
@@ -162,10 +162,10 @@ class User_controller extends CI_Controller
         $this->load->model('User_Model');
 
         $email = $this->input->post('key');
-        $password = $this->input->post('password');
-        $repeat_password = $this->input->post('repeat_password');
+        $encrypted_password = md5($this->input->post('password'));
+        $encrypted_repeat_password = md5($this->input->post('repeat_password'));
 
-        $this->User_Model->resetPassword($email, $password, $repeat_password);
+        $this->User_Model->resetPass($email, $encrypted_password, $encrypted_repeat_password);
     }
 
     /**

@@ -72,7 +72,7 @@
 </head>
 <body>
 
-<form action="requestReset" method="post">
+<form action="../User_controller/requestReset" method="post">
     <div class="container">
         <h1>Send password reset link</h1>
         <p>Please fill in this form to receive password reset link.</p>
