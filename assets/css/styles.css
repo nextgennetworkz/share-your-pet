@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+/*......................registration pages...............*/
+h1{
+    color: #009926;
+}
+
+
