@@ -2,18 +2,18 @@
 
 <html>
 <head>
-   <!--header links goes to there-->
+    <!--header links goes to there-->
     <?= $header_links ?>
 </head>
 <body>
 
 <header>
-  <!--  navigation bar goes to here-->
+    <!--  navigation bar goes to here-->
     <?= $header ?>
 </header>
 
 <main>
-<!--main content goes to here-->
+    <!--main content goes to here-->
     <?= $content ?>
 </main>
 

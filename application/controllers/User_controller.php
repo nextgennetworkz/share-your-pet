@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: Nishen Peiris
@@ -12,17 +13,6 @@ class User_controller extends CI_Controller
         parent::__construct();
     }
 
-    public function index()
-    {
-        $data['header_links'] = $this->load->view('layout/header/header_links', NULL, TRUE);
-        $data['header'] = $this->load->view('layout/header/header', NULL, TRUE);
-        $data['footer_links'] = $this->load->view('layout/footer/footer_links', NULL, TRUE);
-        $data['footer'] = $this->load->view('layout/footer/footer', NULL, TRUE);
-
-        $content = $this->load->view('user/User_register',$data, TRUE);
-        $data['content'] = $content;
-        $this->load->view('layout/main/template', $data);
-    }
     /**
      * Load user registration form
      */

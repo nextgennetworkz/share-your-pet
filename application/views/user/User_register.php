@@ -1,3 +1,17 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: Nishen Peiris
+ * Date: 11/15/18
+ * Time: 9:29 PM
+ */
+?>
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
+?>
+
 <form action="../User_controller/register" method="post">
     <div class="container">
         <h1>Register</h1>
@@ -32,6 +46,8 @@
     </div>
 </form>
 
-</body>
-</html>
+<?php
+require_once('C:\wamp64\www\share-your-pet\application\views\layout\footer\footer_links.php');
+require_once('C:\wamp64\www\share-your-pet\application\views\layout\footer\footer.php');
+?>
 

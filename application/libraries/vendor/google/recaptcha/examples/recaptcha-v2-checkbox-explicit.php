@@ -55,6 +55,7 @@ $lang = 'en';
 
 
 
+
 </script>
 <meta name="description" content="reCAPTCHA demo - &quot;I'm not a robot&quot; checkbox - Explicit render"/>
 <meta property="og:url" content="https://recaptcha-demo.appspot.com/recaptcha-v2-checkbox-explicit.php"/>
