@@ -6,9 +6,10 @@
     <title>Share Your Pet</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../assets/css/styles.css" rel="stylesheet" type="text/css"/>
-    <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/share-your-pet/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/share-your-pet/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/share-your-pet/assets/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="/share-your-pet/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <header></header>

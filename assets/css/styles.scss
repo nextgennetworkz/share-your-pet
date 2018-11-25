@@ -1,0 +1,117 @@
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: AmaticSC-Bold;
+  src: url(../fonts/AmaticSC-Bold.ttf);
+}
+@font-face {
+  font-family: AmaticSC-Regular;
+  src: url(../fonts/AmaticSC-Regular.ttf);
+}
+.input-wrp{
+  margin-bottom: 12px;
+
+  input{
+    padding: 5px;
+    border: none;
+    font-family: Roboto-Thin;
+    width: 100%;
+  }
+
+  label{
+    font-weight: 100;
+    font-family: Roboto-Bold;
+  }
+}
+.middle{
+  text-align: center;
+}
+.blue{
+  background: #041173;
+}
+.google{
+  background: #2959b3;
+}
+.red{
+  background: red;
+}
+.twitter{
+  background: #4d93d0;
+}
+button:focus{
+  outline: none;
+}
+input:focus{
+  outline: none;
+}
+//.......................styles for registration.....................
+.reg-header{
+  padding: 50px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  h1{
+    font-family: AmaticSC-Bold;
+    font-size: 50px;
+  }
+}
+.input-btn{
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.user-reg-sec{
+  background: url("../images/Two-dogs-on-a-walk.jpg");
+  background-size: cover;
+  font-family: Roboto-Regular;
+  min-height: 100vh;
+  h4{
+    color: #6d6d6d;
+  }
+
+  .reg-container{
+    background: #c7cbcec4;
+    color: #ffffff;
+    .social-sign{
+      padding: 30px;
+    }
+    .register-form{
+      padding: 30px;
+    }
+  }
+  .register-form button{
+    background: #007cff;
+  }
+  .register-form{
+    position: relative;
+    border-left: 1px solid #eee;
+    label{
+      color: #ffffff;
+    }
+    input{
+      border-bottom: 1px solid #e1e1e1;
+      background: none;
+      color: #ffffff;
+    }
+    input:focus{
+      transition: all 0.3s ease;
+      border-bottom: 2px solid #007cff;
+      +label{
+        color: #007cff;
+      }
+    }
+  }
+}

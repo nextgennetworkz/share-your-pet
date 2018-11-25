@@ -1,26 +1,96 @@
 @font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf); }
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf); }
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(../fonts/Roboto-Thin.ttf); }
+@font-face {
+  font-family: AmaticSC-Bold;
+  src: url(../fonts/AmaticSC-Bold.ttf); }
+@font-face {
+  font-family: AmaticSC-Regular;
+  src: url(../fonts/AmaticSC-Regular.ttf); }
+.input-wrp {
+  margin-bottom: 12px; }
+  .input-wrp input {
+    padding: 5px;
+    border: none;
     font-family: Roboto-Thin;
-    src: url(../fonts/Roboto-Thin.ttf);
-}
+    width: 100%; }
+  .input-wrp label {
+    font-weight: 100;
+    font-family: Roboto-Bold; }
 
-@font-face {
-    font-family: Roboto-Regular;
-    src: url(../fonts/Roboto-Regular.ttf);
-}
+.middle {
+  text-align: center; }
 
-@font-face {
-    font-family: Roboto-Light;
-    src: url(../fonts/Roboto-Light.ttf);
-}
+.blue {
+  background: #041173; }
 
-@font-face {
-    font-family: Roboto-Bold;
-    src: url(../fonts/Roboto-Bold.ttf);
-}
+.google {
+  background: #2959b3; }
 
-/*......................registration pages...............*/
-h1 {
-    color: #009926;
-}
+.red {
+  background: red; }
 
+.twitter {
+  background: #4d93d0; }
 
+button:focus {
+  outline: none; }
+
+input:focus {
+  outline: none; }
+
+.reg-header {
+  padding: 50px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase; }
+  .reg-header h1 {
+    font-family: AmaticSC-Bold;
+    font-size: 50px; }
+
+.input-btn {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+.user-reg-sec {
+  background: url("../images/Two-dogs-on-a-walk.jpg");
+  background-size: cover;
+  font-family: Roboto-Regular;
+  min-height: 100vh; }
+  .user-reg-sec h4 {
+    color: #6d6d6d; }
+  .user-reg-sec .reg-container {
+    background: #c7cbcec4;
+    color: #ffffff; }
+    .user-reg-sec .reg-container .social-sign {
+      padding: 30px; }
+    .user-reg-sec .reg-container .register-form {
+      padding: 30px; }
+  .user-reg-sec .register-form button {
+    background: #007cff; }
+  .user-reg-sec .register-form {
+    position: relative;
+    border-left: 1px solid #eee; }
+    .user-reg-sec .register-form label {
+      color: #ffffff; }
+    .user-reg-sec .register-form input {
+      border-bottom: 1px solid #e1e1e1;
+      background: none;
+      color: #ffffff; }
+    .user-reg-sec .register-form input:focus {
+      transition: all 0.3s ease;
+      border-bottom: 2px solid #007cff; }
+      .user-reg-sec .register-form input:focus + label {
+        color: #007cff; }
+
+/*# sourceMappingURL=styles.css.map */
