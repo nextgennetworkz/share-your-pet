@@ -32,7 +32,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered register(); ' . $first_name . ', ' . $last_name . ', ' . $email . ', ' . $password . ', ' . $repeat_password . ', ' . $biography);
 
-        $params = array("firstName" => $first_name, "lastName" => $last_name, "biography" => $biography);
+        $params = array("first_name" => $first_name, "last_name" => $last_name, "biography" => $biography);
 
         $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
         $config = new PHPAuthConfig($dbh);
@@ -42,9 +42,47 @@ class User_Model extends CI_Model
         log_message('info', '[User_Model] Exited register(); ' . print_r($result));
     }
 
-    public function update($data, $old_roll_no)
+    public function update($first_name, $last_name, $biography)
     {
+        log_message('info', '[User_Model] Entered updateUser(); ' . $first_name . ', ' . $last_name . ', ' . $biography);
 
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $config = new PHPAuthConfig($dbh);
+        $auth = new PHPAuth($dbh, $config);
+
+        // get current user UID
+        $uid = $auth->getCurrentUID();
+
+        $params = array("first_name" => $first_name, "last_name" => $last_name, "biography" => $biography);
+
+        $result = $auth->updateUser($uid, $params);
+
+        log_message('info', '[User_Model] Exited updateUser(); ' . print_r($result));
+    }
+
+    public function getCurrentUser()
+    {
+        log_message('info', '[User_Model] Entered getCurrentUser()');
+
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $config = new PHPAuthConfig($dbh);
+        $auth = new PHPAuth($dbh, $config);
+
+        // get current user UID
+        $uid = $auth->getCurrentUID();
+        log_message('info', '[User_Model] ID of current user: ' . $uid);
+
+        // Fetch current user from database
+        $this->db->select('first_name, last_name, biography');
+        $this->db->from('phpauth_users');
+        $this->db->where('id', $uid);
+        $query = $this->db->get();
+        $row = $query->row();
+        $data['record'] = $row;
+
+        log_message('info', '[User_Model] Exited getCurrentUser(); ' . print_r($data['record']));
+
+        return $data;
     }
 
     /**

@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['users/register'] = "User_controller/registerView";
+$route['users/update'] = "User_controller/updateView";
 $route['users/activate'] = "User_controller/activateView";
 $route['users/resend-activation-code'] = "User_controller/resendActivationView";
 $route['users/login'] = "User_controller/loginView";

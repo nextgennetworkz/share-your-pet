@@ -28,7 +28,7 @@
         }
 
         /* Full-width input fields */
-        input[type=text], input[type=password], input[type=email] {
+        input[type=text] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -37,7 +37,7 @@
             background: #f1f1f1;
         }
 
-        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+        input[type=text]:focus {
             background-color: #ddd;
             outline: none;
         }
@@ -49,7 +49,7 @@
         }
 
         /* Set a style for the submit button */
-        .loginbtn {
+        .updatebtn {
             background-color: #4CAF50;
             color: white;
             padding: 16px 20px;
@@ -60,7 +60,7 @@
             opacity: 0.9;
         }
 
-        .loginbtn:hover {
+        .updatebtn:hover {
             opacity: 1;
         }
 
@@ -68,37 +68,27 @@
         a {
             color: dodgerblue;
         }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-        .signup {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
 
-<form action="../User_controller/login" method="post">
+<form action="../User_controller/update" method="post">
     <div class="container">
-        <h1>Login</h1>
-        <p>Please fill in this form to login.</p>
+        <h1>Account details</h1>
         <hr>
 
-        <label for="email"><b>Email address*</b></label>
-        <input type="email" placeholder="Enter e-mail" name="email" required>
+        <label for="first_name"><b>First name *</b></label>
+        <input type="text" placeholder="Enter first name" name="first_name" required
+               value="<?php echo $record->first_name; ?>">
 
-        <label for="password"><b>Password*</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <label for="last_name"><b>Last name *</b></label>
+        <input type="text" placeholder="Enter last name" name="last_name" required
+               value="<?php echo $record->last_name; ?>">
 
-        <label for="password"><b>Remember me</b></label>
-        <input type="checkbox" name="remember_me" value="remember_me">
+        <label for="biography"><b>Biography</b></label>
+        <input type="text" placeholder="Enter biography" name="biography" value="<?php echo $record->biography; ?>">
 
-        <button type="submit" class="loginbtn">Login</button>
-    </div>
-
-    <div class="container signup">
-        <p>Don't have an account? <a href="registerView">Sign up</a>.</p>
-        <p>Lost your password? <a href="requestResetView">Reset password</a>.</p>
+        <button type="submit" class="updatebtn">Update</button>
     </div>
 </form>
 

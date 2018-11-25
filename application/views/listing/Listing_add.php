@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
+ * Created by PhpStorm.
  * User: Nishen Peiris
- * Date: 11/17/18
- * Time: 6:30 AM
+ * Date: 11/25/18
+ * Time: 12:14
  */
 ?>
 
@@ -28,7 +28,7 @@
         }
 
         /* Full-width input fields */
-        input[type=text], input[type=password], input[type=email] {
+        input[type=text] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -37,7 +37,7 @@
             background: #f1f1f1;
         }
 
-        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+        input[type=text]:focus {
             background-color: #ddd;
             outline: none;
         }
@@ -78,7 +78,7 @@
 </head>
 <body>
 
-<form action="../User_controller/login" method="post">
+<form action="login" method="post">
     <div class="container">
         <h1>Login</h1>
         <p>Please fill in this form to login.</p>
