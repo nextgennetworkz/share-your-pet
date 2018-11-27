@@ -63,27 +63,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                         </div>
                     </div>
                 </div>
-                <div class="input-wrp">
-                    <label for="biography">Biography</label>
-                    <input type="text" name="biography" required>
-                </div>
 
                 <button type="submit" class="registerbtn input-btn">Register</button>
-
-
-
             </form>
         </div>
-
     </div>
-
 </section>
-
-
-
-
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer_links.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer.php';
 ?>
+
+
+
+
 

@@ -10,23 +10,25 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
 ?>
-
-<form action="../User_controller/activate" method="post">
+<section class="user-reg-sec">
     <div class="container">
-        <h1>Activate</h1>
-        <p>Please fill in this form to activate your account.</p>
-        <hr>
+        <div class="col-sm-7 col-sm-push-3 activate-wrp">
+            <form action="../User_controller/activate" class="active-form" method="post">
+                <h1>Activate Your Account</h1>
+                <p>The activation key has sent to your email.please check your inbox.</p>
+                <div class="input-wrp">
+                    <label for="activation_token">Activation key*</label>
+                    <input type="text"  name="activation_token" required>
+                </div>
 
-        <label for="activation_token"><b>Activation key*</b></label>
-        <input type="text" placeholder="Enter activation key" name="activation_token" required>
-
-        <button type="submit" class="activatebtn">Activate</button>
+                <button type="submit" class="activatebtn input-btn">Activate</button>
+                <p>Resend activation code? <a href="resend-activation-code">Click here to resend</a></p>
+            </form>
+        </div>
     </div>
+</section>
 
-    <div class="container signup">
-        <p>Resend activation code? <a href="resend-activation-code">Resend activation code</a>.</p>
-    </div>
-</form>
-
-</body>
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer.php';
+?>

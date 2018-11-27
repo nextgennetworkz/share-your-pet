@@ -18,6 +18,21 @@
   font-family: AmaticSC-Regular;
   src: url(../fonts/AmaticSC-Regular.ttf);
 }
+@font-face {
+  font-family: Mali-Bold;
+  src: url(../fonts/Mali-Bold.ttf);
+}
+@font-face {
+  font-family: NotoSerif-Bold;
+  src: url(../fonts/NotoSerif-Bold.ttf);
+}
+@font-face {
+  font-family: NotoSerif-Regular;
+  src: url(../fonts/NotoSerif-Regular.ttf);
+}
+body{
+  font-family: Roboto-Regular;
+}
 .input-wrp{
   margin-bottom: 12px;
 
@@ -26,6 +41,7 @@
     border: none;
     font-family: Roboto-Thin;
     width: 100%;
+    background: none;
   }
 
   label{
@@ -54,17 +70,76 @@ button:focus{
 input:focus{
   outline: none;
 }
-//.......................styles for registration.....................
-.reg-header{
-  padding: 50px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  h1{
-    font-family: AmaticSC-Bold;
-    font-size: 50px;
-  }
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
+.control-group{
+  margin-bottom: 12px;
+}
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #3ca4f7;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+label{
+  font-weight: 100;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+//.......................styles for registration.....................
 .input-btn{
   width: 100%;
   border: none;
@@ -78,8 +153,22 @@ input:focus{
   background-size: cover;
   font-family: Roboto-Regular;
   min-height: 100vh;
+  .reg-header{
+    padding: 50px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    h1{
+      font-family: Mali-Bold;
+      font-size: 50px;
+    }
+  }
   h4{
-    color: #6d6d6d;
+    color: #ffffff;
+    font-family: NotoSerif-Regular;
+  }
+  h1{
+    font-family: NotoSerif-Regular;
   }
 
   .reg-container{
@@ -87,6 +176,7 @@ input:focus{
     color: #ffffff;
     .social-sign{
       padding: 30px;
+      border-right: 1px solid #eee;
     }
     .register-form{
       padding: 30px;
@@ -97,7 +187,7 @@ input:focus{
   }
   .register-form{
     position: relative;
-    border-left: 1px solid #eee;
+
     label{
       color: #ffffff;
     }
@@ -113,5 +203,67 @@ input:focus{
         color: #007cff;
       }
     }
+  }
+}
+//..................styles for user account activation.........................
+.activate-wrp{
+  @extend .reg-container;
+  margin-top: 100px;
+}
+.active-form{
+  @extend .register-form;
+}
+//....................styles for login page.........................
+.login-back{
+//  background: url("../images/login-back.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  padding: 0px;
+}
+.login-wrp{
+  min-height: 100vh;
+  padding-top: 90px;
+  .user-img{
+    width: 150px;
+    height: 150px;
+  }
+  input{
+    border-bottom: 1px solid #a2a2a2;
+    width: 70%;
+  }
+  button{
+    width: 70%;
+    background: #007cff;
+  }
+  .login-form{
+    text-align: center;
+    img{
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+
+    input{
+      position: relative;
+    }
+    i{
+      position: absolute;
+      left: 93px;
+      color: #1975a2;
+    }
+    .my-checkbox{
+      width: 5%;
+    }
+
+  }
+}
+
+.login-header {
+  h1{
+    font-family: NotoSerif-Regular;
+    text-align: center;
+    color: #7194c1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
   }
 }
