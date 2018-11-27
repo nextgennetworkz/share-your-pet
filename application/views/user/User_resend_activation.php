@@ -5,95 +5,29 @@
  * Date: 11/20/18
  * Time: 16:34
  */
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: black;
-        }
+    <section class="user-reg-sec">
+        <div class="container">
+            <div class="col-sm-7 col-sm-push-3 activate-wrp">
+                <form action="../User_controller/resendActivation" class="active-form" method="post">
+                    <h1>Resend activation code</h1>
+                    <p>Please enter your email address to resend activation code</p>
+                    <div class="input-wrp">
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <button type="submit" class="resendbtn input-btn">Resend</button>
+                    <p>Activation your account? <a href="activate">Activate your account</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-            background-color: white;
-        }
-
-        /* Full-width input fields */
-        input[type=text] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-        /* Overwrite default styles of hr */
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* Set a style for the submit button */
-        .resendbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .resendbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-        a {
-            color: dodgerblue;
-        }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-        .activate {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<form action="../User_controller/resendActivation" method="post">
-    <div class="container">
-        <h1>Resend activation code</h1>
-        <p>Please fill in this form to resend your activation code.</p>
-        <hr>
-
-        <label for="email"><b>email*</b></label>
-        <input type="email" placeholder="Enter email" name="email" required>
-
-        <button type="submit" class="resendbtn">Resend</button>
-    </div>
-
-    <div class="container activate">
-        <p>Activation your account? <a href="activate">Activate your account</a>.</p>
-    </div>
-</form>
-
-</body>
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer.php';
+?>

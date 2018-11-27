@@ -1,0 +1,72 @@
+/*-----------login page----------*/
+@media (max-width: 1024px) {
+
+    .login-wrp .login-form i {
+        left: 72px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .login-header h1 {
+        font-size: 27px;
+    }
+
+    .login-wrp .login-form i {
+        left: 52px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .login-wrp {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .login-wrp .login-form i {
+        left: 42px;
+    }
+}
+
+/*....................registration page.........................................*/
+@media (max-width: 768px) {
+
+    .user-reg-sec .reg-header h1 {
+        font-family: Mali-Bold;
+        font-size: 37px;
+    }
+
+    .user-reg-sec .reg-container .social-sign p {
+        font-size: 11px;
+    }
+
+    .user-reg-sec h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .user-reg-sec .reg-container .social-sign {
+        border: none;
+    }
+
+    .user-reg-sec h1 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 375px) {
+    .user-reg-sec .reg-header h1 {
+        font-family: Mali-Bold;
+        font-size: 29px;
+    }
+
+    .user-reg-sec h1 {
+        font-size: 21px;
+    }
+}

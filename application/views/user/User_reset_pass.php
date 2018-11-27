@@ -5,91 +5,36 @@
  * Date: 11/22/18
  * Time: 13:21
  */
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: black;
-        }
+    <section class="user-reg-sec">
+        <div class="container">
+            <div class="col-sm-7 col-sm-push-3 activate-wrp">
+                <form action="../User_controller/resetPassword" class="active-form" method="post">
+                    <h1>Password Reset</h1>
+                    <p>Please fill in this form to reset your password.</p>
+                    <div class="input-wrp">
+                        <label for="key"><b>Password reset key*</b></label>
+                        <input type="text" name="key" required>
+                    </div>
+                    <div class="input-wrp">
+                        <label for="password"><b>Password*</b></label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="input-wrp">
+                        <label for="repeat_password"><b>Repeat password*</b></label>
+                        <input type="password" name="repeat_password" required>
+                    </div>
+                    <button type="submit" class="resetbtn input-btn">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-            background-color: white;
-        }
-
-        /* Full-width input fields */
-        input[type=text], input[type=password], input[type=email] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-        /* Overwrite default styles of hr */
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* Set a style for the submit button */
-        .resetbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .resetbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-        a {
-            color: dodgerblue;
-        }
-    </style>
-</head>
-<body>
-
-<form action="../User_controller/resetPassword" method="post">
-    <div class="container">
-        <h1>Password reset</h1>
-        <p>Please fill in this form to reset your password.</p>
-        <hr>
-
-        <label for="key"><b>Password reset key*</b></label>
-        <input type="text" placeholder="Enter reset key" name="key" required>
-
-        <label for="password"><b>Password*</b></label>
-        <input type="password" placeholder="Enter password" name="password" required>
-
-        <label for="repeat_password"><b>Repeat password*</b></label>
-        <input type="password" placeholder="Repeat password" name="repeat_password" required>
-
-        <button type="submit" class="resetbtn">Reset</button>
-    </div>
-</form>
-
-</body>
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer.php';
+?>

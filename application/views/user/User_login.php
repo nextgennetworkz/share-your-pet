@@ -5,102 +5,65 @@
  * Date: 11/17/18
  * Time: 6:30 AM
  */
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: black;
-        }
+    <section>
+        <div class="col-sm-6 login-back">
+            <div id="ninja-slider">
+                <div class="slider-inner">
+                    <ul>
+                        <li>
+                            <a class="ns-img img-responsive" href="/share-your-pet/assets/images/login-back.jpg"></a>
+                        </li>
+                        <li>
+                            <a class="ns-img img-responsive"
+                               href="/share-your-pet/assets/images/0fbf8c7d5c732fdd9a36497a1562f903.jpg"></a>
+                        </li>
+                    </ul>
+                    <div class="navsWrapper">
+                        <div id="ninja-slider-prev"></div>
+                        <div id="ninja-slider-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        * {
-            box-sizing: border-box;
-        }
+        <div class="col-sm-6 login-wrp">
+            <div class="login-main">
+                <div class="login-header">
+                    <h1>Login to Your Account</h1>
+                </div>
+                <div class="login-form">
+                    <div class="img-wrp">
+                        <img src="/share-your-pet/assets/images/user.jpg" class="img-circle img-responsive">
+                    </div>
+                    <form action="login" method="post">
+                        <div class="input-wrp">
+                            <i class="fa fa-envelope"></i><input type="email" placeholder="Enter Your E-mail"
+                                                                 name="email" required>
+                        </div>
+                        <div class="input-wrp">
+                            <i class="fa fa-lock"></i><input type="password" placeholder="Enter Your Password"
+                                                             name="password" required>
+                        </div>
 
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-            background-color: white;
-        }
+                        <label for="password">Remember me</label>
+                        <input type="checkbox" name="remember_me" value="remember_me" class="my-checkbox"><br>
 
-        /* Full-width input fields */
-        input[type=text], input[type=password], input[type=email] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
+                        <button type="submit" class="loginbtn input-btn">Login</button>
 
-        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
+                        <p>Don't have an account? <a href="register">Sign up</a></p>
+                        <p>Lost your password? <a href="request-password-reset">Reset password</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        /* Overwrite default styles of hr */
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
-
-        /* Set a style for the submit button */
-        .loginbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .loginbtn:hover {
-            opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-        a {
-            color: dodgerblue;
-        }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-        .signup {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<form action="../User_controller/login" method="post">
-    <div class="container">
-        <h1>Login</h1>
-        <p>Please fill in this form to login.</p>
-        <hr>
-
-        <label for="email"><b>Email address*</b></label>
-        <input type="email" placeholder="Enter e-mail" name="email" required>
-
-        <label for="password"><b>Password*</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
-        <label for="password"><b>Remember me</b></label>
-        <input type="checkbox" name="remember_me" value="remember_me">
-
-        <button type="submit" class="loginbtn">Login</button>
-    </div>
-
-    <div class="container signup">
-        <p>Don't have an account? <a href="registerView">Sign up</a>.</p>
-        <p>Lost your password? <a href="requestResetView">Reset password</a>.</p>
-    </div>
-</form>
-
-</body>
-</html>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer_links.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/footer/footer.php';
+?>
