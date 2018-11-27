@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                 <p>Please fill in this form to receive password reset link.</p>
                 <div class="input-wrp">
                     <label for="email"><b>Email address*</b></label>
-                    <input type="email"  name="email" required>
+                    <input type="email" name="email" required>
 
                 </div>
                 <button type="submit" class="sendbtn input-btn">Send password reset link</button>

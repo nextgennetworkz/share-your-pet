@@ -2,41 +2,50 @@
   font-family: Roboto-Bold;
   src: url(../fonts/Roboto-Bold.ttf);
 }
+
 @font-face {
   font-family: Roboto-Regular;
   src: url(../fonts/Roboto-Regular.ttf);
 }
+
 @font-face {
   font-family: Roboto-Thin;
   src: url(../fonts/Roboto-Thin.ttf);
 }
+
 @font-face {
   font-family: AmaticSC-Bold;
   src: url(../fonts/AmaticSC-Bold.ttf);
 }
+
 @font-face {
   font-family: AmaticSC-Regular;
   src: url(../fonts/AmaticSC-Regular.ttf);
 }
+
 @font-face {
   font-family: Mali-Bold;
   src: url(../fonts/Mali-Bold.ttf);
 }
+
 @font-face {
   font-family: NotoSerif-Bold;
   src: url(../fonts/NotoSerif-Bold.ttf);
 }
+
 @font-face {
   font-family: NotoSerif-Regular;
   src: url(../fonts/NotoSerif-Regular.ttf);
 }
-body{
+
+body {
   font-family: Roboto-Regular;
 }
-.input-wrp{
+
+.input-wrp {
   margin-bottom: 12px;
 
-  input{
+  input {
     padding: 5px;
     border: none;
     font-family: Roboto-Thin;
@@ -44,40 +53,50 @@ body{
     background: none;
   }
 
-  label{
+  label {
     font-weight: 100;
     font-family: Roboto-Bold;
   }
 }
-.middle{
+
+.middle {
   text-align: center;
 }
-.blue{
+
+.blue {
   background: #041173;
 }
-.google{
+
+.google {
   background: #2959b3;
 }
-.red{
+
+.red {
   background: red;
 }
-.twitter{
+
+.twitter {
   background: #4d93d0;
 }
-button:focus{
+
+button:focus {
   outline: none;
 }
-input:focus{
+
+input:focus {
   outline: none;
 }
+
 .control input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.control-group{
+
+.control-group {
   margin-bottom: 12px;
 }
+
 .control_indicator {
   position: absolute;
   top: 2px;
@@ -87,6 +106,7 @@ input:focus{
   background: #ffffff;
   border: 1px solid #e6e6e6;
 }
+
 .control {
   font-family: arial;
   display: block;
@@ -97,6 +117,7 @@ input:focus{
   cursor: pointer;
   font-size: 13px;
 }
+
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
   background: #cccccc;
@@ -105,27 +126,33 @@ input:focus{
 .control input:checked ~ .control_indicator {
   background: #3ca4f7;
 }
+
 .control:hover input:not([disabled]):checked ~ .control_indicator,
 .control input:checked:focus ~ .control_indicator {
   background: #0e6647d;
 }
+
 .control input:disabled ~ .control_indicator {
   background: #e6e6e6;
   opacity: 0.6;
   pointer-events: none;
 }
+
 .control_indicator:after {
   box-sizing: unset;
   content: '';
   position: absolute;
   display: none;
 }
-label{
+
+label {
   font-weight: 100;
 }
+
 .control input:checked ~ .control_indicator:after {
   display: block;
 }
+
 .control-checkbox .control_indicator:after {
   left: 4px;
   top: 1px;
@@ -139,8 +166,9 @@ label{
 .control-checkbox input:disabled ~ .control_indicator:after {
   border-color: #7b7b7b;
 }
+
 //.......................styles for registration.....................
-.input-btn{
+.input-btn {
   width: 100%;
   border: none;
   font-size: 16px;
@@ -148,110 +176,115 @@ label{
   padding: 10px;
   margin-bottom: 20px;
 }
-.user-reg-sec{
+
+.user-reg-sec {
   background: url("../images/Two-dogs-on-a-walk.jpg");
   background-size: cover;
   font-family: Roboto-Regular;
   min-height: 100vh;
-  .reg-header{
+  .reg-header {
     padding: 50px;
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    h1{
+    h1 {
       font-family: Mali-Bold;
       font-size: 50px;
     }
   }
-  h4{
+  h4 {
     color: #ffffff;
     font-family: NotoSerif-Regular;
   }
-  h1{
+  h1 {
     font-family: NotoSerif-Regular;
   }
 
-  .reg-container{
+  .reg-container {
     background: #c7cbcec4;
     color: #ffffff;
-    .social-sign{
+    .social-sign {
       padding: 30px;
       border-right: 1px solid #eee;
     }
-    .register-form{
+    .register-form {
       padding: 30px;
     }
   }
-  .register-form button{
+  .register-form button {
     background: #007cff;
   }
-  .register-form{
+  .register-form {
     position: relative;
 
-    label{
+    label {
       color: #ffffff;
     }
-    input{
+    input {
       border-bottom: 1px solid #e1e1e1;
       background: none;
       color: #ffffff;
     }
-    input:focus{
+    input:focus {
       transition: all 0.3s ease;
       border-bottom: 2px solid #007cff;
-      +label{
+      + label {
         color: #007cff;
       }
     }
   }
 }
+
 //..................styles for user account activation.........................
-.activate-wrp{
+.activate-wrp {
   @extend .reg-container;
   margin-top: 100px;
 }
-.active-form{
+
+.active-form {
   @extend .register-form;
 }
+
 //....................styles for login page.........................
-.login-back{
-//  background: url("../images/login-back.jpg");
+.login-back {
+  //  background: url("../images/login-back.jpg");
   background-size: cover;
   min-height: 100vh;
   padding: 0px;
 }
-.login-wrp{
+
+.login-wrp {
   min-height: 100vh;
   padding-top: 90px;
-  .user-img{
+  .user-img {
     width: 150px;
     height: 150px;
   }
-  input{
+  input {
     border-bottom: 1px solid #a2a2a2;
     width: 70%;
   }
-  button{
+  button {
     width: 70%;
     background: #007cff;
   }
-  .login-form{
+  .login-form {
     text-align: center;
-    img{
+    img {
       width: 150px;
       height: 150px;
       margin: 0 auto;
     }
 
-    input{
+    input {
       position: relative;
     }
-    i{
+    i {
       position: absolute;
       left: 93px;
       color: #1975a2;
     }
-    .my-checkbox{
+    .my-checkbox {
       width: 5%;
     }
 
@@ -259,7 +292,7 @@ label{
 }
 
 .login-header {
-  h1{
+  h1 {
     font-family: NotoSerif-Regular;
     text-align: center;
     color: #7194c1;

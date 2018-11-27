@@ -35,31 +35,31 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                     <div class="col-sm-6">
                         <div class="input-wrp">
                             <label for="first_name">First name*</label>
-                            <input type="text"  name="first_name" required>
+                            <input type="text" name="first_name" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-wrp">
                             <label for="last_name">Last name*</label>
-                            <input type="text"  name="last_name" required>
+                            <input type="text" name="last_name" required>
                         </div>
                     </div>
                 </div>
                 <div class="input-wrp">
                     <label for="email">Email address*</label>
-                    <input type="email"  name="email" required>
+                    <input type="email" name="email" required>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="input-wrp">
                             <label for="password">Password*</label>
-                            <input type="password"  name="password" required>
+                            <input type="password" name="password" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-wrp">
                             <label for="repeat_password">Confirm password*</label>
-                            <input type="password"  name="repeat_password" required>
+                            <input type="password" name="repeat_password" required>
                         </div>
                     </div>
                 </div>

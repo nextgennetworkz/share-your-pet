@@ -18,15 +18,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                     <p>Please fill in this form to reset your password.</p>
                     <div class="input-wrp">
                         <label for="key"><b>Password reset key*</b></label>
-                        <input type="text"  name="key" required>
+                        <input type="text" name="key" required>
                     </div>
                     <div class="input-wrp">
                         <label for="password"><b>Password*</b></label>
-                        <input type="password"  name="password" required>
+                        <input type="password" name="password" required>
                     </div>
                     <div class="input-wrp">
                         <label for="repeat_password"><b>Repeat password*</b></label>
-                        <input type="password"  name="repeat_password" required>
+                        <input type="password" name="repeat_password" required>
                     </div>
                     <button type="submit" class="resetbtn input-btn">Reset</button>
                 </form>

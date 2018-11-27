@@ -235,7 +235,7 @@
 
                     // Recurse if we're merging plain objects or arrays
                     if (deep && copy && (jQuery.isPlainObject(copy) ||
-                        (copyIsArray = jQuery.isArray(copy)))) {
+                            (copyIsArray = jQuery.isArray(copy)))) {
 
                         if (copyIsArray) {
                             copyIsArray = false;
@@ -1314,10 +1314,10 @@
                 }
 
                 if ((support.matchesSelector = rnative.test((matches = docElem.matches ||
-                    docElem.webkitMatchesSelector ||
-                    docElem.mozMatchesSelector ||
-                    docElem.oMatchesSelector ||
-                    docElem.msMatchesSelector)))) {
+                        docElem.webkitMatchesSelector ||
+                        docElem.mozMatchesSelector ||
+                        docElem.oMatchesSelector ||
+                        docElem.msMatchesSelector)))) {
 
                     assert(function (el) {
                         // Check to see if it's possible to do matchesSelector
@@ -1775,8 +1775,8 @@
                                             node = elem;
                                             while ((node = node[dir])) {
                                                 if (ofType ?
-                                                    node.nodeName.toLowerCase() === name :
-                                                    node.nodeType === 1) {
+                                                        node.nodeName.toLowerCase() === name :
+                                                        node.nodeType === 1) {
 
                                                     return false;
                                                 }
@@ -1845,8 +1845,8 @@
                                                 (diff = nodeIndex = 0) || start.pop())) {
 
                                                 if ((ofType ?
-                                                    node.nodeName.toLowerCase() === name :
-                                                    node.nodeType === 1) &&
+                                                        node.nodeName.toLowerCase() === name :
+                                                        node.nodeType === 1) &&
                                                     ++diff) {
 
                                                     // Cache the index of each encountered element
@@ -1976,8 +1976,8 @@
                             var elemLang;
                             do {
                                 if ((elemLang = documentIsHTML ?
-                                    elem.lang :
-                                    elem.getAttribute("xml:lang") || elem.getAttribute("lang"))) {
+                                        elem.lang :
+                                        elem.getAttribute("xml:lang") || elem.getAttribute("lang"))) {
 
                                     elemLang = elemLang.toLowerCase();
                                     return elemLang === lang || elemLang.indexOf(lang + "-") === 0;
@@ -2168,7 +2168,7 @@
                     // Filters
                     for (type in Expr.filter) {
                         if ((match = matchExpr[type].exec(soFar)) && (!preFilters[type] ||
-                            (match = preFilters[type](match)))) {
+                                (match = preFilters[type](match)))) {
                             matched = match.shift();
                             tokens.push({
                                 value: matched,
@@ -2653,9 +2653,9 @@
                         if ((find = Expr.find[type])) {
                             // Search, expanding context for leading sibling combinators
                             if ((seed = find(
-                                token.matches[0].replace(runescape, funescape),
-                                rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
-                            ))) {
+                                    token.matches[0].replace(runescape, funescape),
+                                    rsibling.test(tokens[0].type) && testContext(context.parentNode) || context
+                                ))) {
 
                                 // If seed is empty or no tokens remain, we can return early
                                 tokens.splice(i, 1);
@@ -2706,9 +2706,9 @@
 // Prevent attribute/property "interpolation"
 // https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
             if (!assert(function (el) {
-                el.innerHTML = "<a href='#'></a>";
-                return el.firstChild.getAttribute("href") === "#";
-            })) {
+                    el.innerHTML = "<a href='#'></a>";
+                    return el.firstChild.getAttribute("href") === "#";
+                })) {
                 addHandle("type|href|height|width", function (elem, name, isXML) {
                     if (!isXML) {
                         return elem.getAttribute(name, name.toLowerCase() === "type" ? 1 : 2);
@@ -2719,10 +2719,10 @@
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
             if (!support.attributes || !assert(function (el) {
-                el.innerHTML = "<input/>";
-                el.firstChild.setAttribute("value", "");
-                return el.firstChild.getAttribute("value") === "";
-            })) {
+                    el.innerHTML = "<input/>";
+                    el.firstChild.setAttribute("value", "");
+                    return el.firstChild.getAttribute("value") === "";
+                })) {
                 addHandle("value", function (elem, name, isXML) {
                     if (!isXML && elem.nodeName.toLowerCase() === "input") {
                         return elem.defaultValue;
@@ -2733,8 +2733,8 @@
 // Support: IE<9
 // Use getAttributeNode to fetch booleans when getAttribute lies
             if (!assert(function (el) {
-                return el.getAttribute("disabled") == null;
-            })) {
+                    return el.getAttribute("disabled") == null;
+                })) {
                 addHandle(booleans, function (elem, name, isXML) {
                     var val;
                     if (!isXML) {
@@ -3044,11 +3044,11 @@
 
                         // Always skip document fragments
                         if (cur.nodeType < 11 && (targets ?
-                            targets.index(cur) > -1 :
+                                targets.index(cur) > -1 :
 
-                            // Don't pass non-elements to Sizzle
-                            cur.nodeType === 1 &&
-                            jQuery.find.matchesSelector(cur, selectors))) {
+                                // Don't pass non-elements to Sizzle
+                                cur.nodeType === 1 &&
+                                jQuery.find.matchesSelector(cur, selectors))) {
 
                             matched.push(cur);
                             break;
@@ -7048,7 +7048,7 @@
     jQuery.speed = function (speed, easing, fn) {
         var opt = speed && typeof speed === "object" ? jQuery.extend({}, speed) : {
             complete: fn || !fn && easing ||
-                jQuery.isFunction(speed) && speed,
+            jQuery.isFunction(speed) && speed,
             duration: speed,
             easing: fn && easing || easing && !jQuery.isFunction(easing) && easing
         };
@@ -7886,7 +7886,7 @@
                         /* eslint-disable no-cond-assign */
 
                         if (option.selected =
-                            jQuery.inArray(jQuery.valHooks.option.get(option), values) > -1
+                                jQuery.inArray(jQuery.valHooks.option.get(option), values) > -1
                         ) {
                             optionSet = true;
                         }
@@ -8034,7 +8034,7 @@
             if (!onlyHandlers && !event.isDefaultPrevented()) {
 
                 if ((!special._default ||
-                    special._default.apply(eventPath.pop(), data) === false) &&
+                        special._default.apply(eventPath.pop(), data) === false) &&
                     acceptData(elem)) {
 
                     // Call a native DOM method on the target with the same name as the event.
@@ -9403,7 +9403,7 @@
     jQuery.ajaxSetup({
         accepts: {
             script: "text/javascript, application/javascript, " +
-                "application/ecmascript, application/x-ecmascript"
+            "application/ecmascript, application/x-ecmascript"
         },
         contents: {
             script: /\b(?:java|ecma)script\b/
