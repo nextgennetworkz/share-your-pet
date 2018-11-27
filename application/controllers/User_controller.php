@@ -22,11 +22,15 @@ class User_controller extends CI_Controller
     }
 
     /**
-     * Load edit user form
+     * Load update user form
      */
-    function editView()
+    function updateView()
     {
-        $this->load->view('user/User_edit');
+        // Load account information of current user
+        $this->load->model('User_Model');
+        $data = $this->User_Model->getCurrentUser();
+
+        $this->load->view('user/User_update', $data);
     }
 
     /**
@@ -87,11 +91,17 @@ class User_controller extends CI_Controller
     }
 
     /**
-     * Edit user
+     * Update user
      */
-    function edit_user()
+    function update()
     {
+        $this->load->model('User_Model');
 
+        $first_name = $this->input->post('first_name');
+        $last_name = $this->input->post('last_name');
+        $biography = $this->input->post('biography');
+
+        $this->User_Model->update($first_name, $last_name, $biography);
     }
 
     /**
@@ -126,7 +136,7 @@ class User_controller extends CI_Controller
         $this->load->model('User_Model');
 
         $email = $this->input->post('email');
-        $encrypted_password = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+        $encrypted_password = md5($this->input->post('password'));
         $remember_me = $this->input->post('remember_me');
 
         $this->User_Model->login($email, $encrypted_password, $remember_me);
@@ -171,7 +181,7 @@ class User_controller extends CI_Controller
     /**
      * Test login functionality
      */
-    function secure_page_view()
+    function securePageView()
     {
         $this->load->view('secure_page');
     }
