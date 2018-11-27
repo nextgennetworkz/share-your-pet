@@ -5,11 +5,11 @@
  * Date: 11/17/18
  * Time: 6:30 AM
  */
-?>
-<?php
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header_links.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layout/header/header.php';
 ?>
+
     <section>
         <div class="col-sm-6 login-back">
             <div id="ninja-slider">
@@ -30,6 +30,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                 </div>
             </div>
         </div>
+
         <div class="col-sm-6 login-wrp">
             <div class="login-main">
                 <div class="login-header">
@@ -37,7 +38,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                 </div>
                 <div class="login-form">
                     <div class="img-wrp">
-                        <img src="/share-your-pet/assets/images/chathu.jpg" class="img-circle img-responsive">
+                        <img src="/share-your-pet/assets/images/user.jpg" class="img-circle img-responsive">
                     </div>
                     <form action="login" method="post">
                         <div class="input-wrp">

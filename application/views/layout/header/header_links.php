@@ -2,6 +2,7 @@
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
     <title>Share Your Pet</title>
     <meta charset="UTF-8">
@@ -12,5 +13,6 @@
     <link href="/share-your-pet/assets/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="/share-your-pet/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
 </head>
+
 <body>
 <header></header>

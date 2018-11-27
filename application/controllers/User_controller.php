@@ -1,11 +1,11 @@
 <?php
-
 /**
  * Created by IntelliJ IDEA.
  * User: Nishen Peiris
  * Date: 11/15/18
  * Time: 9:20 PM
  */
+
 class User_controller extends CI_Controller
 {
     function __construct()
