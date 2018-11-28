@@ -34,7 +34,7 @@ class User_Model extends CI_Model
 
         $params = array("first_name" => $first_name, "last_name" => $last_name, "biography" => $biography);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->register($email, $password, $repeat_password, $params, null, true);
@@ -46,7 +46,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered updateUser(); ' . $first_name . ', ' . $last_name . ', ' . $biography);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
 
@@ -64,7 +64,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered getCurrentUser()');
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
 
@@ -94,7 +94,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered activate(); ' . $activation_token);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->activate($activation_token);
@@ -111,7 +111,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered resendActivation(); ' . $email);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->resendActivation($email, true);
@@ -130,7 +130,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered login(); ' . $email . ', ' . $password . ', ' . $remember_me);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->login($email, $password, $remember_me, null);
@@ -145,7 +145,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered logout()');
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->logout($auth->getCurrentSessionHash());
@@ -162,7 +162,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered requestReset(); ' . $email);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->requestReset($email, true);
@@ -181,7 +181,7 @@ class User_Model extends CI_Model
     {
         log_message('info', '[User_Model] Entered resetPass(); ' . $key . ', ' . $password . ', ' . $repeat_password);
 
-        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "root");
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
         $result = $auth->resetPass($key, $password, $repeat_password, null);

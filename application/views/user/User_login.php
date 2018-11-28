@@ -40,7 +40,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/share-your-pet/application/views/layo
                     <div class="img-wrp">
                         <img src="/share-your-pet/assets/images/user.jpg" class="img-circle img-responsive">
                     </div>
-                    <form action="login" method="post">
+                    <form action="../User_controller/login" method="post">
                         <div class="input-wrp">
                             <i class="fa fa-envelope"></i><input type="email" placeholder="Enter Your E-mail"
                                                                  name="email" required>

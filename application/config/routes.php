@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// User related routes
 $route['users/register'] = "User_controller/registerView";
 $route['users/update'] = "User_controller/updateView";
 $route['users/activate'] = "User_controller/activateView";
@@ -61,3 +62,6 @@ $route['users/login'] = "User_controller/loginView";
 $route['users/logout'] = "User_controller/logoutView";
 $route['users/request-password-reset'] = "User_controller/requestResetView";
 $route['users/reset-password'] = "User_controller/resetPassView";
+
+// Listing related routes
+$route['listings/add'] = "Pets_and_owners_listing_controller/addView";
