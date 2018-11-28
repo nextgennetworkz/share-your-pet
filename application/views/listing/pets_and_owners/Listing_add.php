@@ -49,7 +49,7 @@
         }
 
         /* Set a style for the submit button */
-        .registerbtn {
+        .addbtn {
             background-color: #4CAF50;
             color: white;
             padding: 16px 20px;
@@ -60,19 +60,8 @@
             opacity: 0.9;
         }
 
-        .registerbtn:hover {
+        .addbtn:hover {
             opacity: 1;
-        }
-
-        /* Add a blue text color to links */
-        a {
-            color: dodgerblue;
-        }
-
-        /* Set a grey background color and center the text of the "sign in" section */
-        .signin {
-            background-color: #f1f1f1;
-            text-align: center;
         }
     </style>
 </head>
@@ -136,13 +125,8 @@
         }
         ?>
         <hr>
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-        <button type="submit" class="registerbtn">Register</button>
-    </div>
-
-    <div class="container signin">
-        <p>Already have an account? <a href="#">Sign in</a>.</p>
+        <button type="submit" class="addbtn">Add</button>
     </div>
 </form>
 
