@@ -60,6 +60,23 @@ class User_Model extends CI_Model
         log_message('info', '[User_Model] Exited updateUser(); ' . print_r($result));
     }
 
+    /**
+     * Get the user ID of the current user
+     */
+    public function getCurrentUID()
+    {
+        log_message('info', '[User_Model] Entered getCurrentUID()');
+
+        $dbh = new PDO("mysql:host=localhost;dbname=share_your_pet", "root", "gvt123");
+        $config = new PHPAuthConfig($dbh);
+        $auth = new PHPAuth($dbh, $config);
+
+        return $auth->getCurrentUID();
+    }
+
+    /**
+     * Get first name, last name and biography of current user
+     */
     public function getCurrentUser()
     {
         log_message('info', '[User_Model] Entered getCurrentUser()');
@@ -68,6 +85,7 @@ class User_Model extends CI_Model
         $config = new PHPAuthConfig($dbh);
         $auth = new PHPAuth($dbh, $config);
 
+        //TODO: use getCurrentUID() instead of calling $auth->getCurrentUID()
         // get current user UID
         $uid = $auth->getCurrentUID();
         log_message('info', '[User_Model] ID of current user: ' . $uid);
@@ -78,10 +96,9 @@ class User_Model extends CI_Model
         $this->db->where('id', $uid);
         $query = $this->db->get();
         $row = $query->row();
-        $data['record'] = $row;
+        $data['user'] = $row;
 
-        log_message('info', '[User_Model] Exited getCurrentUser(); ' . print_r($data['record']));
-
+        log_message('info', '[User_Model] Exited getCurrentUser(); ' . print_r($data['user']));
         return $data;
     }
 

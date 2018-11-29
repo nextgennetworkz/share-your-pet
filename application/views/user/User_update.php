@@ -79,14 +79,14 @@
 
         <label for="first_name"><b>First name *</b></label>
         <input type="text" placeholder="Enter first name" name="first_name" required
-               value="<?php echo $record->first_name; ?>">
+               value="<?php echo $user->first_name; ?>">
 
         <label for="last_name"><b>Last name *</b></label>
         <input type="text" placeholder="Enter last name" name="last_name" required
-               value="<?php echo $record->last_name; ?>">
+               value="<?php echo $user->last_name; ?>">
 
         <label for="biography"><b>Biography</b></label>
-        <input type="text" placeholder="Enter biography" name="biography" value="<?php echo $record->biography; ?>">
+        <input type="text" placeholder="Enter biography" name="biography" value="<?php echo $user->biography; ?>">
 
         <button type="submit" class="updatebtn">Update</button>
     </div>

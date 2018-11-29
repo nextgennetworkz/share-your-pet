@@ -69,12 +69,11 @@
 
 <form action="../Pets_and_owners_listing_controller/add">
     <div class="container">
-        <h1>Add Your Listing</h1>
-        <p>Please fill in this form to create a listing.</p>
+        <h1>Share your pet</h1>
         <hr>
 
         <label for="pet"><b>Select Your Pet *</b></label>
-        <select name="pet" required>
+        <select name="pet_id" required>
             <?php
             foreach ($pets as $pet) {
                 ?>
@@ -84,7 +83,7 @@
             ?>
         </select>
 
-        <label for="psw"><b>Add a cover image</b></label>
+        <label for="cover_image"><b>Add a cover image</b></label>
         <input type="file" name="cover_image">
 
         <label for="pet_name"><b>Name of your pet *</b></label>
@@ -96,11 +95,14 @@
         <label for="location"><b>Precise location *</b></label>
         <input type="text" placeholder="Enter location" name="location" required>
 
+        <label for="reason"><b>Reason</b></label>
+        <input type="text" placeholder="Enter reason for sharing your pet" name="reason">
+
         <label for="sex"><b>Sex</b></label><br>
         <?php
         foreach ($sexes as $sex) {
             ?>
-            <input type="radio" name="sex" value="<?php echo $sex->id; ?>"><?php echo $sex->sex; ?><br>
+            <input type="radio" name="sex_id" value="<?php echo $sex->id; ?>"><?php echo $sex->sex; ?><br>
             <?php
         }
         ?>
@@ -110,7 +112,7 @@
         <?php
         foreach ($sizes as $size) {
             ?>
-            <input type="radio" name="size" value="<?php echo $size->id; ?>"><?php echo $size->size; ?><br>
+            <input type="radio" name="size_id" value="<?php echo $size->id; ?>"><?php echo $size->size; ?><br>
             <?php
         }
         ?>
@@ -120,10 +122,17 @@
         <?php
         foreach ($ages as $age) {
             ?>
-            <input type="radio" name="age" value="<?php echo $age->id; ?>"><?php echo $age->age; ?><br>
+            <input type="radio" name="age_id" value="<?php echo $age->id; ?>"><?php echo $age->age; ?><br>
             <?php
         }
         ?>
+        <br>
+
+        <label for="images"><b>Upload all your images</b></label>
+        <input type="file" name="images" multiple>
+
+        <label for="contact"><b>Contact number</b></label>
+        <input type="text" placeholder="Enter your contact number" name="contact">
         <hr>
 
         <button type="submit" class="addbtn">Add</button>
