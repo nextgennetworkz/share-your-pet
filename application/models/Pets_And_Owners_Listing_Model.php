@@ -25,7 +25,7 @@ class Pets_And_Owners_Listing_Model extends CI_Model
     public function add($user, $pet_id, $pet_name, $description, $location, $reason, $sex_id, $size_id, $age_id, $contact)
     {
         $data = array(
-            'user_id' => $user->id,
+            'user_id' => $user,
             'pet_id' => $pet_id,
             'pet_name' => $pet_name,
             'description' => $description,
@@ -44,30 +44,6 @@ class Pets_And_Owners_Listing_Model extends CI_Model
      * Edit a given listing
      */
     public function edit()
-    {
-
-    }
-
-    /**
-     * Get a listing with a given listing ID
-     */
-    public function getListing()
-    {
-
-    }
-
-    /**
-     * Get all categories
-     */
-    public function getCategories()
-    {
-
-    }
-
-    /**
-     * Get all listings under a given category
-     */
-    public function getListingsByCategory()
     {
 
     }

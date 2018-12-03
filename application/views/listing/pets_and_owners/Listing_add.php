@@ -67,7 +67,7 @@
 </head>
 <body>
 
-<form action="../Pets_and_owners_listing_controller/add">
+<form action="../Pets_and_owners_listing_controller/add" method="post">
     <div class="container">
         <h1>Share your pet</h1>
         <hr>

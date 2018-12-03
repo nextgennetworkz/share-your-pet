@@ -38,8 +38,8 @@ class Pets_and_owners_listing_controller extends CI_Controller
         $this->load->model('User_Model');
         $this->load->model('Pets_And_Owners_Listing_Model');
 
-        // Load account information of current user
-        $data = $this->User_Model->getCurrentUser();
+        // Load UID of current user
+        $data = $this->User_Model->getCurrentUID();
 
         $pet_id = $this->input->post('pet_id');
         $pet_name = $this->input->post('pet_name');
@@ -51,6 +51,6 @@ class Pets_and_owners_listing_controller extends CI_Controller
         $age_id = $this->input->post('age_id');
         $contact = $this->input->post('contact');
 
-        $this->Pets_And_Owners_Listing_Model->add($data['user'], $pet_id, $pet_name, $description, $location, $reason, $sex_id, $size_id, $age_id, $contact);
+        $this->Pets_And_Owners_Listing_Model->add($data, $pet_id, $pet_name, $description, $location, $reason, $sex_id, $size_id, $age_id, $contact);
     }
 }
